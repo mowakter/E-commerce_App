@@ -7,7 +7,7 @@ import 'package:project_3/view/screens/all_products/all_Product.dart';
 import 'package:project_3/view/screens/home/widget/category_widget.dart';
 import 'package:project_3/view/screens/home/widget/featured_Card.dart';
 
-import '../../custom_widget/custom_Card.dart';
+import '../../custom_widget/custom_Cart.dart';
 import '../../custom_widget/slider.dart';
 import '../../custom_widget/title_Heading.dart';
 
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
           ],
         ),
         actions: [
-          CustomCard(),
+          CustomCart(),
           SizedBox(width: 10),
         ],
       ),

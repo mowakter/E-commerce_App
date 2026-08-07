@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project_3/view/custom_widget/custom_Card.dart';
+import 'package:project_3/view/custom_widget/custom_Cart.dart';
 import 'package:project_3/view/custom_widget/text.dart';
 import 'package:project_3/view/screens/all_products/product.dart';
 import 'package:project_3/view/screens/all_products/widget/filter_section.dart';
-import 'package:project_3/view/screens/all_products/widget/productCard_Widget.dart';
+import 'package:project_3/view/screens/all_products/widget/productCart_Widget.dart';
 
 class AllProduct extends StatefulWidget {
   const AllProduct({super.key, required this.index});
@@ -25,10 +25,10 @@ class _AllProductState extends State<AllProduct> {
             fSize: 18,
           ),
         ),
-        actions: [
+   actions: [
           Icon(Icons.search),
           SizedBox(height: 10),
-          CustomCard(),
+          CustomCart(),
           SizedBox(height: 10),
         ],
       ),
