@@ -18,6 +18,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+     // onTap: onTap,
       child: Container(
         height: 50,
         width: 200,

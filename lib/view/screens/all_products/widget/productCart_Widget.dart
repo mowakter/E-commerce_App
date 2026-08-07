@@ -14,6 +14,7 @@ class ProductCardWidget extends StatelessWidget {
         children: [
           Stack(
             alignment: Alignment.topRight,
+            //alignment: Alignment.topRight,
             children: [
               Container(
                 height: 120,

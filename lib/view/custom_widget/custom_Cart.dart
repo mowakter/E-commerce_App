@@ -10,6 +10,7 @@ class CustomCart extends StatelessWidget {
     return Badge(
       label: Text("0"),
       backgroundColor: Colors.orangeAccent,
+      //backgroundColor: Colors.orangeAccent,
       textColor: Colors.white,
       child: IconButton(
         onPressed: () {},
