@@ -61,7 +61,7 @@ class _AllProductState extends State<AllProduct> {
             itemCount: Product.p.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 1.0,
+              childAspectRatio: 1.2,
             ),
             itemBuilder: (context, index) => ProductCartWidget(index: index,
             pData: productData[index],
