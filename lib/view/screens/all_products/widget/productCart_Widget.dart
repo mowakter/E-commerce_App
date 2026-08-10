@@ -26,9 +26,9 @@ class ProductCartWidget extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  // image: DecorationImage(
-                  //   image: NetworkImage(pData["images"] ?? "No Image"),
-                  // ),
+                   image: DecorationImage(
+                    image: NetworkImage(pData.imageUrl),
+                  ),
                 ),
               ),
               Icon(Icons.favorite_border),

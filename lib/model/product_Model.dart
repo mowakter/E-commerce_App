@@ -6,8 +6,8 @@
    double discount;
    double ? rating;
    String review;
-
-   ProductModel({required this.id,required this.title,required this.oldPrice,required this.discount, this.rating,required this.review,});
+   String imageUrl;
+   ProductModel({required this.id,required this.title,required this.oldPrice,required this.discount, this.rating,required this.review,required this.imageUrl});
 
 
 
