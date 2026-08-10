@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:project_3/model/product_Model.dart';
 
 import '../../../custom_widget/text.dart';
 import '../product.dart';
 
-class ProductCardWidget extends StatelessWidget {
-  const ProductCardWidget({super.key, required this.index});
+class ProductCartWidget extends StatelessWidget {
+  const ProductCartWidget({super.key, required this.index, required this.pData});
   final int index;
+
+
+  final ProductModel pData;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +20,15 @@ class ProductCardWidget extends StatelessWidget {
         children: [
           Stack(
             alignment: Alignment.topRight,
-            //alignment: Alignment.topRight,
             children: [
               Container(
                 height: 120,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                    image: NetworkImage(Product.p[index]["images"]),
-                  ),
+                  // image: DecorationImage(
+                  //   image: NetworkImage(pData["images"] ?? "No Image"),
+                  // ),
                 ),
               ),
               Icon(Icons.favorite_border),
@@ -37,20 +42,20 @@ class ProductCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText(
-                  text: Product.p[index]["title"] ?? "No Title",
+                  text: pData.title,
                   fSize: 15,
                   fWeight: FontWeight.bold,
                 ),
                 Row(
                   children: [
+                  //   CustomText(
+                  //     text: "৳ ${pData["price"] ?? "No Price"}",
+                  //     fSize: 15,
+                  //     fWeight: FontWeight.bold,
+                  //   ),
+                  //   SizedBox(width: 30),
                     CustomText(
-                      text: "৳ ${Product.p[index]["price"] ?? "No Price"}",
-                      fSize: 15,
-                      fWeight: FontWeight.bold,
-                    ),
-                    SizedBox(width: 30),
-                    CustomText(
-                      text: "৳ ${Product.p[index]["oldPrice"] ?? "No OldPrice"}",
+                      text: "৳ ${pData.oldPrice}",
                       fSize: 15,
                       fWeight: FontWeight.bold,
                       color: Colors.black26,
@@ -58,7 +63,7 @@ class ProductCardWidget extends StatelessWidget {
                     ),
                     SizedBox(width: 30),
                     CustomText(
-                      text: "-${Product.p[index]["discount"] ?? "No Discount"}",
+                      text: "-${pData.discount}",
                       fSize: 15,
                       fWeight: FontWeight.bold,
                       color: Colors.deepOrange,
@@ -69,12 +74,12 @@ class ProductCardWidget extends StatelessWidget {
                   children: [
                     Icon(Icons.star, color: Colors.purpleAccent),
                     CustomText(
-                      text: "${Product.p[index]["rating"] ?? "No Rating"}",
+                      text: "${pData.rating}",
                       color: Colors.redAccent,
                       fSize: 15,
                     ),
                     CustomText(
-                      text: "${Product.p[index]["review"] ?? "No Review"}",
+                      text: "${pData.review}",
                       color: Colors.black26,
                       fSize: 15,
                     ),
