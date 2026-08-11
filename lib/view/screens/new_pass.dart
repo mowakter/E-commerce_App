@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_3/view/screens/home/home.dart';
 
 import '../custom_widget/text.dart';
 import '../custom_widget/text_field.dart';
@@ -112,6 +113,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
               //Reset
               InkWell(
                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Home(index: 0)));
                   //log("===");
                 },
                 child: Card(

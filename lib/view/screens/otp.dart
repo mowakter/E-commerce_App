@@ -81,7 +81,7 @@ class _OtpScreenState extends State<OtpScreen> {
 
               // Phone Number
               Text(
-                '+880 1764-641399',
+                '+880 1701913432',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

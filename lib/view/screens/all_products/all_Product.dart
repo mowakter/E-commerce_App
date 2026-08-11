@@ -3,6 +3,7 @@ import 'package:project_3/view/custom_widget/custom_Cart.dart';
 import 'package:project_3/view/screens/all_products/product.dart';
 import 'package:project_3/view/screens/all_products/widget/filter_section.dart';
 import 'package:project_3/view/screens/all_products/widget/productCart_Widget.dart';
+import 'package:project_3/view/screens/details/details.dart';
 
 import '../../custom_widget/text.dart';
 import 'package:flutter/material.dart';
@@ -61,12 +62,17 @@ class _AllProductState extends State<AllProduct> {
             itemCount: Product.p.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 1.2,
+              childAspectRatio: 1.0,
             ),
-            itemBuilder: (context, index) => ProductCartWidget(index: index,
-            pData: productData[index],
+            itemBuilder: (context, index){
+               return InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>Details(index: 0)));
+                },
+                child: ProductCartWidget(index: index, pData: productData[index]),
+              );
+            }
             ),
-          ),
         ],
       ),
     );
