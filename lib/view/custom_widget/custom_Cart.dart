@@ -8,7 +8,7 @@ class CustomCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Badge(
-      label: Text("0"),
+      label: Text("7"),
       backgroundColor: Colors.orangeAccent,
       //backgroundColor: Colors.orangeAccent,
       textColor: Colors.white,
