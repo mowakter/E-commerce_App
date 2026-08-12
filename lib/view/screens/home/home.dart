@@ -20,7 +20,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,10 +42,7 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-        actions: [
-          CustomCart(),
-          SizedBox(width: 10),
-        ],
+        actions: [CustomCart(), SizedBox(width: 10)],
       ),
       body: Padding(
         padding: const EdgeInsets.all(6.0),
@@ -62,25 +58,29 @@ class _HomeState extends State<Home> {
             categories(),
             SizedBox(height: 10),
 
-            titleHeading(text: 'Featured Products', onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) =>AllProduct(index: 0)));
-            }),
+            titleHeading(
+              text: 'Featured Products',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AllProduct(index: 0)),
+                );
+              },
+            ),
             SizedBox(height: 10),
 
             Featured(),
             titleHeading(text: 'New Arrivals', onTap: () {}),
-            SizedBox(height: 10,),
+            SizedBox(height: 10),
             NewArrival(),
-            SizedBox(height: 10,),
+            SizedBox(height: 10),
             titleHeading(text: 'Best Selling Product', onTap: () {}),
-          SizedBox(height: 10,),
+            SizedBox(height: 10),
 
-          Trending(),
-
-
+            Trending(),
 
             titleHeading(text: 'Top Trending Product', onTap: () {}),
-            SizedBox(height: 10,),
+            SizedBox(height: 10),
 
             Trending(),
           ],
@@ -91,58 +91,60 @@ class _HomeState extends State<Home> {
 
   SizedBox Trending() {
     return SizedBox(
-            height: 100,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              shrinkWrap: true,
-              itemBuilder: (context, i) => Container(
-                height: 100,
-                width: 100,
-                margin: EdgeInsets.zero,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3ZSkZMqNQ-Nc2DX4ks0FzqbzTRAeypvslk5_TzeVEg&s=10",
-                    ),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-
-            ),
-          );
+      height: 100,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        shrinkWrap: true,
+        itemBuilder: (context, i) =>
+         Stack(
+           alignment:Alignment.bottomCenter,
+           children: [
+             Container(
+               height: 100,
+               width: 100,
+               margin: EdgeInsets.zero,
+               decoration: BoxDecoration(
+                 borderRadius: BorderRadius.circular(10),
+                 image: DecorationImage(
+                   image: NetworkImage(
+                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3ZSkZMqNQ-Nc2DX4ks0FzqbzTRAeypvslk5_TzeVEg&s=10",
+                   ),
+                   fit: BoxFit.fill,
+                 ),
+               ),
+             ),
+             Positioned(
+                 bottom: 5,
+                 child: CustomText(text: "$i/5")),
+           ],
+         ),
+      ),
+    );
   }
 
   SizedBox NewArrival() {
     return SizedBox(
-            height: 160,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              shrinkWrap: true,
-              itemBuilder: (context, i) =>
-                  FeaturedCard(
-                    isShowDiscount: false,
-                  ),
-            ),
-          );
+      height: 160,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        shrinkWrap: true,
+        itemBuilder: (context, i) => FeaturedCard(isShowDiscount: false),
+      ),
+    );
   }
 
   SizedBox Featured() {
     return SizedBox(
-            height: 180,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              shrinkWrap: true,
-              itemBuilder: (context, i) =>
-                  FeaturedCard(
-                   isShowDiscount: true,
-                  ),
-              ),
-            );
+      height: 180,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        shrinkWrap: true,
+        itemBuilder: (context, i) => FeaturedCard(isShowDiscount: true),
+      ),
+    );
   }
 
   SizedBox categories() {
@@ -157,7 +159,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-
-
-
