@@ -80,17 +80,6 @@ class _MyOrdersState extends State<MyOrders> {
                 ],
               ),
             ),)
-            //  TabBar(
-            //   labelColor: Colors.orange,
-            //   unselectedLabelColor: Colors.black,
-            //   tabs: [
-            //     Tab(text: "All"),
-            //     Tab(text: "Processing"),
-            //     Tab(text: "Shipped"),
-            //     Tab(text: "Delivered"),
-            //     Tab(text: "Cancelled"),
-            //   ],
-            // ),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(

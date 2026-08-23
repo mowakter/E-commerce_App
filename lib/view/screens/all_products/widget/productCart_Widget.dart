@@ -48,12 +48,6 @@ class ProductCartWidget extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                  //   CustomText(
-                  //     text: "৳ ${pData["price"] ?? "No Price"}",
-                  //     fSize: 15,
-                  //     fWeight: FontWeight.bold,
-                  //   ),
-                  //   SizedBox(width: 30),
                     CustomText(
                       text: "৳ ${pData.oldPrice}",
                       fSize: 15,
