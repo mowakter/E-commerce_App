@@ -73,18 +73,13 @@ class _OtpScreenState extends State<OtpScreen> {
                 color: Colors.black,
               ),
               SizedBox(height: 6),
-
-
-              Text(
-                '+880 1701913432',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFFFF5722),
-                ),
+              CustomText(
+                text: '+880 1701913432',
+                fSize: 16,
+                fWeight: FontWeight.bold,
               ),
-              SizedBox(height: 40),
 
+              SizedBox(height: 40),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -136,14 +131,10 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 30),
 
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Didn't receive code? ",
-                    style: TextStyle(color: Colors.black, fontSize: 13),
-                  ),
+                  CustomText(text: "Didn't receive code? ", fSize: 13),
                   InkWell(
                     onTap: () {
                       //log("===");
