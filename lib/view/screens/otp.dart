@@ -12,7 +12,7 @@ class OtpScreen extends StatefulWidget {
 class _OtpScreenState extends State<OtpScreen> {
   final List<TextEditingController> _controllers = List.generate(
     6,
-        (_) => TextEditingController(),
+    (_) => TextEditingController(),
   );
   final List<FocusNode> _focusNodes = List.generate(6, (_) => FocusNode());
 
@@ -44,15 +44,14 @@ class _OtpScreenState extends State<OtpScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Lock Icon
               Container(
                 width: 100,
                 height: 100,
-                decoration:  BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0xFFE8F5E9),
                   shape: BoxShape.circle,
                 ),
-                child:  Icon(
+                child: Icon(
                   Icons.sms_outlined,
                   size: 60,
                   color: Color(0xFF2E7D32),
@@ -60,18 +59,14 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 24),
 
-              // Title
-              Text(
-                'Verify OTP',
-                style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+              CustomText(
+                text: 'Verify OTP',
+                fSize: 26,
+                fWeight: FontWeight.bold,
               ),
+
               SizedBox(height: 15),
 
-              // Subtitle
               CustomText(
                 text: "Enter the 6-digit code sent to",
                 fSize: 15,
@@ -79,7 +74,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 6),
 
-              // Phone Number
+
               Text(
                 '+880 1701913432',
                 style: TextStyle(
@@ -90,12 +85,12 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 40),
 
-              // OTP Box
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: List.generate(
                   6,
-                      (index) => SizedBox(
+                  (index) => SizedBox(
                     width: 48,
                     height: 68,
                     child: TextField(
@@ -141,7 +136,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 30),
 
-              // Resend Code & Timer
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -168,7 +163,6 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 100),
 
-              //Verify
               InkWell(
                 onTap: () {
                   Navigator.push(

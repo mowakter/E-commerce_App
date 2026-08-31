@@ -3,6 +3,7 @@ import 'package:project_3/oders/my_orders.dart';
 import 'package:project_3/view/screens/all_products/all_Product.dart';
 import 'package:project_3/view/screens/details/details.dart';
 import 'package:project_3/view/screens/home/home.dart';
+import 'package:project_3/view/screens/otp.dart';
 import 'package:project_3/view/screens/splash.dart';
 
 void main(){
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(index: 0),
+      home: OtpScreen(),
     ) ;
   }
 }
