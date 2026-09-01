@@ -25,7 +25,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
 
-        //BackButton
         leading: IconButton(
           icon:  Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.pop(context),
@@ -39,7 +38,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
             children: [
               SizedBox(height: 20),
 
-              // Lock Icon
               Container(
                 width: 100,
                 height: 100,
@@ -55,7 +53,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
               ),
               SizedBox(height: 24),
 
-              // Title
               CustomText(
                 text: "Set New Password",
                 fSize: 25,
@@ -64,7 +61,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
               ),
               SizedBox(height: 8),
 
-              // Subtitle
               CustomText(
                 text: "Create a new password for your account.",
                 fSize: 15,
@@ -72,7 +68,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
               ),
               SizedBox(height: 24),
 
-              // New Password
               CustomTextField(
                 email: newPass,
                 hint: "New Password",
@@ -80,7 +75,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                 suffixIcon: Icon(Icons.visibility_off_outlined),
               ),
 
-              // Confirm New Password
               CustomTextField(
                 email: confirmPass,
                 hint: "Confirm New Password",
@@ -88,7 +82,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                 suffixIcon: Icon(Icons.visibility_off_outlined),
               ),
 
-              // Password Requirements Box
               Container(
                 padding:  EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -110,7 +103,6 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
               ),
               SizedBox(height: 20),
 
-              //Reset
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> Home(index: 0)));
