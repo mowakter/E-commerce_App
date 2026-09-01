@@ -148,10 +148,8 @@ class _OtpScreenState extends State<OtpScreen> {
                 ],
               ),
               SizedBox(height: 4),
-              Text(
-                '(00:30)',
-                style: TextStyle(color: Colors.black, fontSize: 12),
-              ),
+              CustomText(text: '(00:30)'),
+
               SizedBox(height: 100),
 
               InkWell(
