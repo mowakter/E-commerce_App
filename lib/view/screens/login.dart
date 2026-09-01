@@ -20,18 +20,22 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.network(
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4cVyrnVxeEfSyBVwQiSvwkiVyvdnsD7J3AUFG58dEQ&s=10",
               height: 120,
-            ),SizedBox(height: 40,),
+            ),
+            SizedBox(height: 40),
             CustomText(text: "Welcome Back!", fSize: 20),
             CustomText(text: " Sign in here to continue shopping", fSize: 15),
-            CustomTextField(email: phone, hint: "Enter your phone number",
-                prefixIcon: Icon(Icons.phone)),
+            CustomTextField(
+              email: phone,
+              hint: "Enter your phone number",
+              prefixIcon: Icon(Icons.phone),
+            ),
             CustomTextField(
               email: password,
               hint: "Password",

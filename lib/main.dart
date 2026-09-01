@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:project_3/oders/my_orders.dart';
 import 'package:project_3/view/screens/all_products/all_Product.dart';
 import 'package:project_3/view/screens/details/details.dart';
+import 'package:project_3/view/screens/forgot_password.dart';
 import 'package:project_3/view/screens/home/home.dart';
+import 'package:project_3/view/screens/login.dart';
 import 'package:project_3/view/screens/new_pass.dart';
 import 'package:project_3/view/screens/otp.dart';
 import 'package:project_3/view/screens/splash.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SetNewPasswordScreen(),
+      home: ForgotScreen(),
     ) ;
   }
 }

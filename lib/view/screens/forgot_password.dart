@@ -29,7 +29,6 @@ class _ForgotScreenState extends State<ForgotScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Lock Icon
             Container(
               width: 100,
               height: 100,
@@ -45,15 +44,6 @@ class _ForgotScreenState extends State<ForgotScreen> {
             ),
             SizedBox(height: 24),
 
-            //Img
-            // Image.network(
-            //   "https://thumbs.dreamstime.com/b/forgot-password-vector-icon-white-background-277222632.jpg",
-            //   height: 150,
-            //   width: double.infinity,
-            // ),
-            // SizedBox(height: 50),
-
-            // Title
             CustomText(
               text: "Forgot password?",
               fSize: 30,
@@ -61,7 +51,6 @@ class _ForgotScreenState extends State<ForgotScreen> {
             ),
             SizedBox(height: 15),
 
-            // Subtitle
             CustomText(
               maxLine: 2,
               text:
@@ -70,7 +59,6 @@ class _ForgotScreenState extends State<ForgotScreen> {
             ),
             SizedBox(height: 10),
 
-            // Phone & Email Box
             Container(
               height: 50,
               decoration: BoxDecoration(
@@ -125,7 +113,6 @@ class _ForgotScreenState extends State<ForgotScreen> {
               ),
             ),
 
-            // Phone & Email Icon
             Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
