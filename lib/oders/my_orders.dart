@@ -17,11 +17,11 @@ class _MyOrdersState extends State<MyOrders> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 5,
-     // animationDuration: Duration(milliseconds: 5),
+      // animationDuration: Duration(milliseconds: 5),
       child: Scaffold(
         appBar: AppBar(
-         // backgroundColor: Colors.white,
-         // elevation: 0,
+          // backgroundColor: Colors.white,
+          // elevation: 0,
           // leading: IconButton(
           //   icon: Icon(Icons.arrow_back, color: Colors.black),
           //   onPressed: () => Navigator.pop(context),
@@ -30,7 +30,7 @@ class _MyOrdersState extends State<MyOrders> {
           actions: [
             Icon(Icons.search, size: 25),
             SizedBox(width: 10),
-              CustomCart(),
+            CustomCart(),
           ],
           bottom: TabBar(
             tabAlignment: TabAlignment.start,
@@ -38,11 +38,11 @@ class _MyOrdersState extends State<MyOrders> {
             isScrollable: true,
             labelColor: Colors.deepOrange,
             tabs: [
-              CustomText(text: "All ",fSize: 15,),
-              CustomText(text: "Processing",fSize: 15,),
-              CustomText(text: "Shipped",fSize: 15,),
-              CustomText(text: "Delivered",fSize: 15,),
-              CustomText(text: "Cancelled",fSize: 15,),
+              CustomText(text: "All ", fSize: 15),
+              CustomText(text: "Processing", fSize: 15),
+              CustomText(text: "Shipped", fSize: 15),
+              CustomText(text: "Delivered", fSize: 15),
+              CustomText(text: "Cancelled", fSize: 15),
             ],
           ),
         ),
@@ -50,36 +50,62 @@ class _MyOrdersState extends State<MyOrders> {
           children: [
             SafeArea(
               child: Padding(
-              padding: const EdgeInsets.only(left: 20,top: 20),
-              child: Row(
-                children: [
-                  Column(
-                    spacing: 5,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomText(text: "Order ID",fSize: 12,fWeight: FontWeight.bold,color: Colors.black38,),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CustomText(text: "#DB123456",fSize: 18,fWeight: FontWeight.bold,color: Colors.black,),
-                          SizedBox(width: 60,),
-                          CustomText(text: "12 August 2026",fSize: 13,fWeight: FontWeight.bold,color: Colors.black38,),
-                        ],
-                      ),
-                      SizedBox(height: 15),
-                      Row(
-                        spacing: 350,
-                        children: [
-                          CustomText(text: "3 Items",fSize: 13,fWeight: FontWeight.bold,color: Colors.black54,),
-                          CustomText(text: "৳ 4,397",fSize: 15,fWeight: FontWeight.bold,color: Colors.black,),
-                        ],),
-                    ],
-
-                  ),
-                ],
+                padding: const EdgeInsets.only(left: 20, top: 20),
+                child: Row(
+                  children: [
+                    Column(
+                      spacing: 5,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomText(
+                          text: "Order ID",
+                          fSize: 12,
+                          fWeight: FontWeight.bold,
+                          color: Colors.black38,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomText(
+                              text: "#DB123456",
+                              fSize: 18,
+                              fWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                            SizedBox(width: 60),
+                            CustomText(
+                              text: "12 August 2026",
+                              fSize: 13,
+                              fWeight: FontWeight.bold,
+                              color: Colors.black38,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 15),
+                        Row(
+                          spacing: 350,
+                          children: [
+                            CustomText(
+                              text: "3 Items",
+                              fSize: 13,
+                              fWeight: FontWeight.bold,
+                              color: Colors.black54,
+                            ),
+                            CustomText(
+                              text: "৳ 4,397",
+                              fSize: 15,
+                              fWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),)
+            ),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(

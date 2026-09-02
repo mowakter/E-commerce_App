@@ -22,8 +22,6 @@ class AllProduct extends StatefulWidget {
 class _AllProductState extends State<AllProduct> {
   List<ProductModel> productData =[];
 
-
-
   getproduct(){
     productData.clear();
     productData.addAll(Product.p);
