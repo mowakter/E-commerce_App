@@ -7,6 +7,7 @@ import 'package:project_3/view/screens/home/home.dart';
 import 'package:project_3/view/screens/login.dart';
 import 'package:project_3/view/screens/new_pass.dart';
 import 'package:project_3/view/screens/otp.dart';
+import 'package:project_3/view/screens/reg.dart';
 import 'package:project_3/view/screens/splash.dart';
 
 void main(){
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ForgotScreen(),
+      home: RegScreen(),
     ) ;
   }
 }

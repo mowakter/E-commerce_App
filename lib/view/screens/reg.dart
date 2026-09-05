@@ -19,7 +19,7 @@ class _RegScreenState extends State<RegScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -28,9 +28,9 @@ class _RegScreenState extends State<RegScreen> {
               fSize: 40,
               fWeight: FontWeight.bold,
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 10),
             CustomText(text: "Sing up to get started", fSize: 15),
-            SizedBox(height: 10,),
+            SizedBox(height: 10),
             CustomTextField(
               email: name,
               hint: "Full Name",
@@ -62,6 +62,7 @@ class _RegScreenState extends State<RegScreen> {
             InkWell(
               onTap: () {
                 //log("===");
+                //log("===");
               },
               child: Card(
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -81,7 +82,7 @@ class _RegScreenState extends State<RegScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 10,
               children: [
-                CustomText(text: "Already Registered?",fSize: 14),
+                CustomText(text: "Already Registered?", fSize: 14),
                 InkWell(
                   onTap: () {
                     Navigator.push(
@@ -90,7 +91,11 @@ class _RegScreenState extends State<RegScreen> {
                     );
                     //log("===");
                   },
-                  child: CustomText(text: "Sign in",fSize: 15,color: Colors.deepOrange),
+                  child: CustomText(
+                    text: "Sign in",
+                    fSize: 15,
+                    color: Colors.deepOrange,
+                  ),
                 ),
               ],
             ),
